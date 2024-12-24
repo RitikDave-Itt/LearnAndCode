@@ -16,15 +16,11 @@ namespace EmailCarbonFootprint
         public static double CarbonEmmisionForEmailTransmission(double sizeInMB)
         {
             return 30 * sizeInMB;
-
         }
 
         public static double CarbonEmmisionForEmailStorage(double sizeInMB)
         {
             return 10 * sizeInMB;
-
         }
-
-        
     }
 }
