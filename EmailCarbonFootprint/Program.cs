@@ -1,4 +1,4 @@
-﻿namespace Assignment1
+﻿namespace EmailCarbonFootprint
 {
     internal class Program
     {
