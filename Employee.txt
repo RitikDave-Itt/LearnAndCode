@@ -1,0 +1,17 @@
+Class Employee
+{
+    int id;
+    string name;
+    string department;
+    bool: working
+
+};
+Class EmployeeOperations{
+    public:
+    saveEmployeeTODatabase()
+    printEmployeeDetailReportXML()
+    printEmployeeDetailReportCSV()
+    terminateEmployee()
+    bool isWorking()
+
+}
