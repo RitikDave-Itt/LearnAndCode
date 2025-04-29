@@ -20,7 +20,7 @@ namespace ATM
             try
             {
                 string cardNumber = UserInterface.GetCardNumber();
-                Account account = AccountDatabase.GetAccount(cardNumber);
+                Account account = AccountDatabase.FindAccountByCardNumber(cardNumber);
                 UserInterface.TryValidatePin(account,service);               
                 decimal amount = UserInterface.GetWithdrawalAmount();
                 service.Withdraw(account, amount);

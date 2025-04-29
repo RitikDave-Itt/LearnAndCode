@@ -38,7 +38,7 @@ namespace ATM.Database
             
         }
 
-        public static Account GetAccount(string cardNumber)
+        public static Account FindAccountByCardNumber(string cardNumber)
         {
             var account = _accounts.FirstOrDefault(acc => acc.CardNumber == cardNumber);
 
