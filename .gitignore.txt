@@ -1,0 +1,91 @@
+# Build results
+bin/
+obj/
+
+# User-specific files
+*.user
+*.userosscache
+*.suo
+*.userprefs
+
+# Rider
+.idea/
+
+# VS Code
+.vscode/
+
+# ASP.NET Scaffolding
+ScaffoldingReadMe.txt
+
+# Visual Studio temporary files
+*.vspscc
+*.vssscc
+*.dbmdl
+*.bak
+*.backup
+*.log
+
+# DotCover
+*.dotCover
+
+# NCrunch
+_NCrunch_*
+.*crunch*.local.xml
+
+# NUnit
+TestResult.xml
+TestResults/
+
+# Azure Web Apps publish settings
+PublishProfiles/
+
+# NuGet
+*.nupkg
+*.snupkg
+.nuget/
+packages/
+# except build/ directory for custom build props and targets
+!build/
+
+# Windows image file caches
+Thumbs.db
+ehthumbs.db
+
+# Windows Installer files
+*.cab
+*.msi
+*.msm
+*.msp
+
+# Others
+*.log
+*.DS_Store
+*.class
+*.jar
+
+# Resharper
+_ReSharper*/
+*.[Rr]e[Ss]harper
+
+# DotNet Core
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+# Temp files
+~$*
+
+# Web specific
+wwwroot/
+node_modules/
+bower_components/
+
+# Environment variables
+.env
+
+# IDE settings
+*.sln.docstates
+
+# Global JetBrains Rider/Resharper settings
+.idea/
+*.sln.iml
