@@ -12,7 +12,7 @@ namespace LocationFinder.Services
     {
        
 
-        public async Task<LocationResult> GetLocationAsync(string query)
+        public async Task<LocationResult> FindLocationAsync(string query)
         {
             var url = $"{LocationFinder.Utilities.Enviroment.BaseUrl}?key={LocationFinder.Utilities.Enviroment.ApiKey}&q={Uri.EscapeDataString(query)}&format=json";
 

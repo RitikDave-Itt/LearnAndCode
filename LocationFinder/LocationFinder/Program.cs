@@ -13,7 +13,7 @@ namespace LocationFinder
             {
                 Console.WriteLine("Enter location:");               
                 var locationQuery = Console.ReadLine();
-                var result = await locationService.GetLocationAsync(locationQuery);
+                var result = await locationService.FindLocationAsync(locationQuery);
 
                 Console.WriteLine($"Latitude: {result.Lat}, Longitude: {result.Lon}");
             }

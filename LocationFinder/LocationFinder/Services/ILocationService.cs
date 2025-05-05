@@ -9,6 +9,6 @@ namespace LocationFinder.Services
 {
     public interface ILocationService
     {
-        Task<LocationResult> GetLocationAsync(string query);
+        Task<LocationResult> FindLocationAsync(string query);
     }
 }
