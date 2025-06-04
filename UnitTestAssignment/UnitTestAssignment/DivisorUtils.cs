@@ -8,16 +8,7 @@ public static class DivisorUtils
 
         int count = 0;
 
-        for (int i = 1; i <= n; i++)
-        {
-            int a = i;
-            int b = n - i + 1;
-
-            if (CountDivisors(a) == CountDivisors(b))
-            {
-                count++;
-            }
-        }
+        
 
         return count;
     }
