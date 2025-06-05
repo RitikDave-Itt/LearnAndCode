@@ -1,36 +1,42 @@
 ﻿using System;
+using UnitTestAssignment.CustomExceptions;
 
 public static class DivisorUtils
 {
     public static int CountPairsWithEqualDivisors(int number)
     {
-        if (number <= 0) return 0;
-
-        int matchingPairCount = 0;
-
-        for (int firstNumber = 1; firstNumber <= number; firstNumber++)
+        if (number < 0)
         {
-            int secondNumber = number - firstNumber + 1;
+            throw new InvalidInputException("Input must be a non-negative integer.");
+        }
 
-            if (FindDivisorCount(firstNumber) == FindDivisorCount(secondNumber))
+        if (number == 0) return 0;
+
+        int equalDivisorPairCount = 0;
+
+        for (int firstValue = 1; firstValue <= number; firstValue++)
+        {
+            int secondValue = number - firstValue + 1;
+
+            if (FindDivisorCount(firstValue) == FindDivisorCount(secondValue))
             {
-                matchingPairCount++;
+                equalDivisorPairCount++;
             }
         }
 
-        return matchingPairCount;
+        return equalDivisorPairCount;
     }
 
     private static int FindDivisorCount(int value)
     {
         int divisorCount = 0;
-        int squareRoot = (int)Math.Sqrt(value);
+        int sqrt = (int)Math.Sqrt(value);
 
-        for (int possibleDivisor = 1; possibleDivisor <= squareRoot; possibleDivisor++)
+        for (int divisor = 1; divisor <= sqrt; divisor++)
         {
-            if (value % possibleDivisor == 0)
+            if (value % divisor == 0)
             {
-                divisorCount += (possibleDivisor * possibleDivisor == value) ? 1 : 2;
+                divisorCount += (divisor * divisor == value) ? 1 : 2;
             }
         }
 

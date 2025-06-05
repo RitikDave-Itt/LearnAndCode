@@ -1,6 +1,8 @@
 using Xunit;
-namespace UnitTest
+using System;
+using UnitTestAssignment.CustomExceptions;
 
+namespace UnitTest
 {
     public class DivisorUtilsUnitTests
     {
@@ -19,10 +21,11 @@ namespace UnitTest
         }
 
         [Fact]
-        public void TestNegative()
+        public void TestNegative_ShouldThrowException()
         {
-            int result = DivisorUtils.CountPairsWithEqualDivisors(-5);
-            Assert.Equal(0, result);
+            Assert.Throws<InvalidInputException>(() =>
+                DivisorUtils.CountPairsWithEqualDivisors(-5)
+            );
         }
 
         [Fact]
